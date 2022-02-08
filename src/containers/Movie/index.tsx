@@ -6,9 +6,7 @@ interface IMovie {
   setShowModal: (isOtherUserBlock: boolean) => void;
 }
 
-function Movie({setShowModal, movieDetails}:IMovie) {
-  console.log('movieDetails ...... ', movieDetails);
-  
+function Movie({setShowModal, movieDetails}:IMovie) {  
   return <Wrapper onClick={() => setShowModal(false)}>
     <Content onClick={(e) => e.stopPropagation()}>
       <img src={movieDetails['im:image'][2].label} alt="logo" />

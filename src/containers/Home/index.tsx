@@ -21,8 +21,6 @@ function Sidebar(): JSX.Element {
     setList(movies.response);
   }, [movies?.status]);
 
-  console.log("filterText...... ", filterText);
-
   const showDetails = (details: any) => {
     setShowModal(true);
     setMovieDetails(details);
