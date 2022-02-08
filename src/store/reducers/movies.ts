@@ -13,7 +13,7 @@ const SUCCESS_TO_GET_MOVIES = (state: any, { payload }: any) => {
   return {
     ...state,
     status: ACTION_STATUSES.SUCCEED,
-    categories: payload
+    response: payload
   }
 };
 

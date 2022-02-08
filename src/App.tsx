@@ -10,7 +10,7 @@ function Containers() {
   return (
     <Provider store={store}>
       <div className="app">
-        <div style={{ display: 'flex' }}>
+        <div>
           <Suspense fallback={<p>Loading</p>}>
             <BrowserRouter>
               <Switch>

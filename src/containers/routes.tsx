@@ -1,13 +1,13 @@
 import React, { lazy } from 'react';
 const Home = lazy(() => import('./Home'));
 
-export const ROUTES = [ 
+export const ROUTES = [
   {
-    path: '/:id',
+    path: '/',
     component: Home,
     key: 'home',
-    exact: false
-  },  
+    exact: true
+  }, 
   {
     path: '*',
     component: () => <div>Not found</div>,

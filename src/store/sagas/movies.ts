@@ -10,14 +10,14 @@ interface ResponseGenerator {
 function* getMovies() {
   try {
     const response: ResponseGenerator = yield client.get('topmovies/limit=100/json');
-    yield put(successGetMovies(response.data.entry));
+    yield put(successGetMovies(response.data.feed.entry));
   } catch (err) {
     console.log(err);
   }
 }
 
-function* CategoriesSaga() {
+function* MoviesSaga() {
   yield takeLatest(CATEGORY_ACTIONS.ATTEMPT_TO_GET_MOVIES, getMovies);
 }
 
-export default CategoriesSaga;
+export default MoviesSaga;
