@@ -3,7 +3,7 @@ const Home = lazy(() => import('./Home'));
 
 export const ROUTES = [
   {
-    path: '/',
+    path: '/Movies',
     component: Home,
     key: 'home',
     exact: true
