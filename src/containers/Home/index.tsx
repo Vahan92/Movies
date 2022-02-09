@@ -35,21 +35,17 @@ function Sidebar(): JSX.Element {
         placeholder="Type to search"
         onChange={(e) =>
           setFilterText(
-            `${e.target.value
-              .charAt(0)
-              .toUpperCase()}${e.target.value.substring(1)}`
+            e.target.value.replace(/(^\w|\s\w)/g, (m) => m.toUpperCase())
           )
         }
       />
       <StyledUl>
         {list
-          ?.filter((value: any) =>
-            value["im:name"].label.startsWith(filterText)
-          )
+          ?.filter((value: any) => value["im:name"].label.includes(filterText))
           .map((info: any) => {
             return (
               <li onClick={() => showDetails(info)} key={info["im:name"].label}>
-                <img src={info["im:image"][0].label} alt='logo' />
+                <img src={info["im:image"][0].label} alt="logo" />
                 <span>{info["im:name"].label}</span>
               </li>
             );

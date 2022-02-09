@@ -9,6 +9,31 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: popup 0.7s;
+
+  @keyframes popup {
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.4);
+  }
+  60%{
+    transform: scale(1.1);
+  }
+  70%{
+    transform: scale(1.2);
+  }
+  80%{
+    transform: scale(1);
+  }
+  90%{
+    transform: scale(1.1);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
 `;
 
 export const Content = styled.div`
@@ -17,12 +42,14 @@ export const Content = styled.div`
   min-height: 605px;
   min-width: 785px;
   padding: 0 20px;
-  background-color: orange;
+  background-color: #ffc14d;
   border-radius: 6px;
 
   > img {
     display: block;
     margin: 20px auto;
+    width: 113px;
+    height: 170px;
   }
 
   > h3, h5 {

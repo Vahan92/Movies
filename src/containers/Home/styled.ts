@@ -30,6 +30,8 @@ margin: 20px 0;
 
     img {
       margin-right: 10px;
+      width: 39px;
+      height: 59px;
     }
   }
 `;
