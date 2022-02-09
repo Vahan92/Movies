@@ -1,11 +1,16 @@
-import { lazy } from 'react';
+import React, { lazy } from 'react';
 const Home = lazy(() => import('./Home'));
 
 export const ROUTES = [
   {
-    path: '*',
+    path: '/',
     component: Home,
     key: 'home',
-    exact: false
+    exact: true
+  }, 
+  {
+    path: '*',
+    component: () => <p>Not Found</p>,
+    key: 'not-found',
   }
 ];
